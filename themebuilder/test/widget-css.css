@@ -1,0 +1,84 @@
+		/* Featured box */
+/*.feature_box { overflow: hidden; }
+.feature_box a { display: block; overflow: hidden; }
+.feature_box a:hover { text-decoration: none; }
+.feature_box .photo { width: 100%; line-height: 0; position: relative; }
+.feature_box .photo img { display: block; transition: opacity .40s ease-in-out; -o-transition: opacity .40s ease-in-out; -moz-transition: opacity .40s ease-in-out; -webkit-transition: opacity .40s ease-in-out; }
+.feature_box .photo img { opacity: 0.99; filter: alpha(opacity=99); }
+.feature_box .photo img:hover { opacity: 0.8; filter: alpha(opacity=80); }
+.feature_box .photo .desc { position: absolute; left: 0; bottom: 20px; width: 80%; border-right: 40px solid rgba(0, 0, 0, 0.20); }
+.feature_box .photo .desc .desc_i { padding: 10px 15px 15px 15px;  border-top: 5px solid rgba(255, 255, 255, 0.25); }
+.feature_box .photo .desc .desc_i h4 { margin-bottom: 0; }
+.feature_box .photo .desc .desc_i span.icon { position: absolute; right: -25px; top: 50%; font-size: 16px; line-height: 16px; margin-top: -8px; }
+*/
+/* Code & Pre */
+code, pre {
+	color: #595A5C;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 50%, #f2f2f2 50%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #ffffff 50%,#f2f2f2 50%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 50%,#f2f2f2 50%); /* Opera 11.10+ */
+	background: linear-gradient(top,  #ffffff 50%,#f2f2f2 50%); /* W3C */
+    background-size: 42px 42px;
+	padding: 21px 15px 20px;
+	display: block;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	line-height: 21px !important;
+	border: 1px solid #EEEEEE;
+	font-family: monospace !important;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/*
+blockquote { padding-bottom: 24px; }
+blockquote blockquote { margin-bottom: 0; }
+blockquote div.inside { overflow: hidden; }
+blockquote div.inside p.bq { padding: 20px 50px; font-size: 22px; line-height: 26px; margin-bottom: 0; font-family: Georgia, Cambria, serif; text-align: center; }
+blockquote p.author { font-size: 13px; line-height: 17px; margin: 0 15px 18px; padding-top: 15px; font-style:normal; text-align: center; text-shadow: 0 0 0; }
+blockquote p.author a {}
+blockquote p.author a:hover {}
+*/
+		
+		/* Article box */
+/*.article_box { overflow: hidden; }
+.article_box .photo { line-height: 0; }
+.article_box .desc {}
+.article_box .desc { padding: 15px 15px 0; }
+.article_box .desc h4 { margin-bottom: 10px; }
+.article_box .desc p { margin-bottom: 10px; }
+.article_box a.button { margin-bottom: 0; }
+*/
+/* Get in touch */
+/*.get_in_touch {}
+.get_in_touch h6 { margin-bottom: 7px; }
+.get_in_touch li { overflow: hidden; }
+.get_in_touch li.label { border-bottom-width: 1px; border-bottom-style: solid; font-size: 12px; margin-bottom: 2px; }
+.get_in_touch .ico { display: block; width: 16px; height: 16px; overflow: hidden; text-indent: -9999px; float: left; margin-right: 7px; margin-top: 8px; clear: both; }
+.get_in_touch i { display: block; width: 18px !important; height: 18px; overflow: hidden; float: left; margin-right: 7px; margin-top: 8px; clear: both; }
+.get_in_touch p { width: 80%; display: block; float: left; margin: 0px; padding: 5px 0 7px 10px; border-left-width: 1px; border-left-style: solid; }
+.get_in_touch .address i { font-size: 18px; line-height: 18px; }
+.get_in_touch .address p { font-size: 12px; line-height: 17px; }
+.get_in_touch .phone i { font-size: 18px; line-height: 18px; }
+.get_in_touch .phone p { font-size: 17px; line-height: 22px; font-weight: bold; }
+.get_in_touch .fax i { font-size: 13px; line-height: 13px; }
+.get_in_touch .fax p { font-size: 14px; line-height: 19px; }
+.get_in_touch .mail i { font-size: 13px; line-height: 13px;}
+.get_in_touch .mail p { line-height: 19px; }
+.get_in_touch .www i { margin-top: 7px; font-size: 13px; line-height: 13px; }
+.get_in_touch .www p { line-height: 16px; }
+.get_in_touch li.last { border-bottom: 0; }
+*/
+
+/* #Contact form
+================================================== */
+/*.contact_form { overflow: hidden; position: relative; }
+.contact_form input[type="text"] { float: left; margin-bottom: 14px; }
+.contact_form .nick { margin-right: 15px; }
+.contact_form .email { margin-right: 15px; }
+.contact_form textarea { clear: both; margin-bottom: 14px; height: 150px; }
+.contact_form input[type="submit"] { float: right; margin-bottom: 14px; }
+*/

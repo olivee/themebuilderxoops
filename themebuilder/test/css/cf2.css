@@ -1,0 +1,147 @@
+.sfs-menu,.sfs-menu * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+.sfs-menu {
+        line-height: 1.0;
+}
+
+.sfs-menu ul {
+        position: absolute;
+        top: -999em;
+        width: 10em; 
+}
+
+.sfs-menu ul li {
+        width: 100%;
+}
+
+.sfs-menu li:hover {
+        visibility: inherit;
+}
+
+.sfs-menu li {
+        float: left;
+        position: relative;
+}
+
+.sfs-menu a {
+        display: block;
+        position: relative;
+}
+
+.sfs-menu li:hover ul,.sfs-menu li.sfsHover ul {
+        left: 0;
+        top: 2.5em;
+        z-index: 99;
+}
+
+ul.sfs-menu li:hover li ul,ul.sfs-menu li.sfsHover li ul {
+        top: -999em;
+}
+
+ul.sfs-menu li li:hover ul,ul.sfs-menu li li.sfsHover ul {
+        left: 10em;
+        top: 0;
+}
+
+ul.sfs-menu li li:hover li ul,ul.sfs-menu li li.sfsHover li ul {
+        top: -999em;
+}
+
+ul.sfs-menu li li li:hover ul,ul.sfs-menu li li li.sfsHover ul {
+        left: 10em;
+        top: 0;
+}
+
+
+.sfs-menu {
+        float: left;
+        margin-bottom: 1em;
+}
+
+.sfs-menu a {
+        border-left: 1px solid #fff;
+        border-top: 1px solid #CFDEFF;
+        padding: .75em 1em;
+        text-decoration: none;
+}
+
+.sfs-menu a,.sfs-menu a:visited {
+
+        color: #13a;
+}
+
+.sfs-menu li {
+        background: #17E21F;
+}
+
+.sfs-menu li li {
+        background: #17E21F;
+}
+
+.sfs-menu li li li {
+        background: #17E21F;
+}
+
+.sfs-menu li:hover,.sfs-menu li.sfsHover,.sfs-menu a:focus,.sfs-menu a:hover,.sfs-menu a:active
+        {
+        background: #CFDEFF;
+        outline: 0;
+}
+
+.sfs-menu a.sfs-with-ul {
+        padding-right: 2.25em;
+        min-width: 1px;
+}
+
+.sfs-sub-indicator {
+        position: absolute;
+        display: block;
+        right: .75em;
+        top: 1.05em;
+        width: 10px;
+        height: 10px;
+        text-indent: -999em;
+        overflow: hidden;
+        /*background: url('../images/arrows-ffffff.png') no-repeat -10px -100px;*/
+
+}
+
+a>.sfs-sub-indicator {
+        top: .8em;
+        background-position: 0 -100px;
+}
+
+a:focus>.sfs-sub-indicator,a:hover>.sfs-sub-indicator,a:active>.sfs-sub-indicator,li:hover>a>.sfs-sub-indicator,li.sfsHover>a>.sfs-sub-indicator
+        {
+        background-position: -10px -100px;
+}
+
+.sfs-menu ul .sfs-sub-indicator {
+        background-position: -10px 0;
+}
+
+.sfs-menu ul a>.sfs-sub-indicator {
+        background-position: 0 0;
+}
+
+.sfs-menu ul a:focus>.sfs-sub-indicator,.sfs-menu ul a:hover>.sfs-sub-indicator,.sfs-menu ul a:active>.sfs-sub-indicator,.sfs-menu ul li:hover>a>.sfs-sub-indicator,.sfs-menu ul li.sfsHover>a>.sfs-sub-indicator
+        {
+        background-position: -10px 0;
+}
+
+.sfs-shadow ul {
+       /* background: url('../images/shadow.png') no-repeat bottom right;*/
+        padding: 0 8px 9px 0;
+        -moz-border-radius-bottomleft: 17px;
+        -moz-border-radius-topright: 17px;
+        -webkit-border-top-right-radius: 17px;
+        -webkit-border-bottom-left-radius: 17px;
+}
+
+.sfs-shadow ul.sfs-shadow-off {
+        background: transparent;
+}
