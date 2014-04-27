@@ -4,7 +4,7 @@ $modversion['name']        = _AM_SYSTEM_THEME;
 $modversion['version']     = '1.0';
 $modversion['description'] = _AM_SYSTEM_THEME_DESC;
 $modversion['author']      = '';
-$modversion['credits']     = 'test  Olivee Wajdi test testt test';
+$modversion['credits']     = 'Olivee Wajdi';
 $modversion['help']        = 'page=themebuilder';
 $modversion['license'] = "GPL see LICENSE";
 $modversion['official']    = 1;
