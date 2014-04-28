@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=<{$xoops_charset}>" />
+		<meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+		<title><{$xoops_sitename}></title>
+		<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+	</head>
+	
+	<body>
+		<div id="xo-redirect">
+					<p><{$message}></p>
+					<p style="margin: 20px"><img src="<{xoImgUrl images/redirect.gif}>" alt="<{$message}>" /></p>
+				<{$lang_ifnotreload}>
+			<{if $xoops_logdump != ''}><div><{$xoops_logdump}></div><{/if}>
+		</div>
+	</body>
+</html>

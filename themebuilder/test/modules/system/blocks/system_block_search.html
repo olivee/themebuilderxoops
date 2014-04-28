@@ -1,0 +1,8 @@
+</div>
+	<div id="search_system">
+	<form action="<{xoAppUrl /search.php}>" method="get">
+    <input style="height:18px" type="text" name="query" size="13" value="Search"  onfocus="if (this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}"/>
+	<input type="hidden" name="action" value="results" /><input type="image" src="<{$xoops_imageurl}>images/src.png" class="submit" name="submit" />
+    </form>
+    <a href="<{$xoops_url}>/search.php"><{$block.lang_advsearch}></a>
+	</div>

@@ -1,0 +1,147 @@
+.sfs4-menu,.sfs4-menu * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+}
+
+.sfs4-menu {
+        line-height: 1.0;
+}
+
+.sfs4-menu ul {
+        position: absolute;
+        top: -999em;
+        width: 10em; 
+}
+
+.sfs4-menu ul li {
+        width: 100%;
+}
+
+.sfs4-menu li:hover {
+        visibility: inherit;
+}
+
+.sfs4-menu li {
+        float: left;
+        position: relative;
+}
+
+.sfs4-menu a {
+        display: block;
+        position: relative;
+}
+
+.sfs4-menu li:hover ul,.sfs4-menu li.sfs4Hover ul {
+        left: 0;
+        top: 2.5em;
+        z-index: 99;
+}
+
+ul.sfs4-menu li:hover li ul,ul.sfs4-menu li.sfs4Hover li ul {
+        top: -999em;
+}
+
+ul.sfs4-menu li li:hover ul,ul.sfs4-menu li li.sfs4Hover ul {
+        left: 10em;
+        top: 0;
+}
+
+ul.sfs4-menu li li:hover li ul,ul.sfs4-menu li li.sfs4Hover li ul {
+        top: -999em;
+}
+
+ul.sfs4-menu li li li:hover ul,ul.sfs4-menu li li li.sfs4Hover ul {
+        left: 10em;
+        top: 0;
+}
+
+
+.sfs4-menu {
+        float: left;
+        margin-bottom: 1em;
+}
+
+.sfs4-menu a {
+        border-left: 1px solid #fff;
+        border-top: 1px solid #CFDEFF;
+        padding: .75em 1em;
+        text-decoration: none;
+}
+
+.sfs4-menu a,.sfs4-menu a:visited {
+
+        color: #13a;
+}
+
+.sfs4-menu li {
+        background: blue;
+}
+
+.sfs4-menu li li {
+        background: #EF9832;
+}
+
+.sfs4-menu li li li {
+        background: #17E21F;
+}
+
+.sfs4-menu li:hover,.sfs4-menu li.sfs4Hover,.sfs4-menu a:focus,.sfs4-menu a:hover,.sfs4-menu a:active
+        {
+        background: #CFDEFF;
+        outline: 0;
+}
+
+.sfs4-menu a.sfs4-with-ul {
+        padding-right: 2.25em;
+        min-width: 1px;
+}
+
+.sfs4-sub-indicator {
+        position: absolute;
+        display: block;
+        right: .75em;
+        top: 1.05em;
+        width: 10px;
+        height: 10px;
+        text-indent: -999em;
+        overflow: hidden;
+        /*background: url('../images/arrows-ffffff.png') no-repeat -10px -100px;*/
+
+}
+
+a>.sfs4-sub-indicator {
+        top: .8em;
+        background-position: 0 -100px;
+}
+
+a:focus>.sfs4-sub-indicator,a:hover>.sfs4-sub-indicator,a:active>.sfs4-sub-indicator,li:hover>a>.sfs4-sub-indicator,li.sfs4Hover>a>.sfs4-sub-indicator
+        {
+        background-position: -10px -100px;
+}
+
+.sfs4-menu ul .sfs4-sub-indicator {
+        background-position: -10px 0;
+}
+
+.sfs4-menu ul a>.sfs4-sub-indicator {
+        background-position: 0 0;
+}
+
+.sfs4-menu ul a:focus>.sfs4-sub-indicator,.sfs4-menu ul a:hover>.sfs4-sub-indicator,.sfs4-menu ul a:active>.sfs4-sub-indicator,.sfs4-menu ul li:hover>a>.sfs4-sub-indicator,.sfs4-menu ul li.sfs4Hover>a>.sfs4-sub-indicator
+        {
+        background-position: -10px 0;
+}
+
+.sfs4-shadow ul {
+       /* background: url('../images/shadow.png') no-repeat bottom right;*/
+        padding: 0 8px 9px 0;
+        -moz-border-radius-bottomleft: 17px;
+        -moz-border-radius-topright: 17px;
+        -webkit-border-top-right-radius: 17px;
+        -webkit-border-bottom-left-radius: 17px;
+}
+
+.sfs4-shadow ul.sfs4-shadow-off {
+        background: transparent;
+}

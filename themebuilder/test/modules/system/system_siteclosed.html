@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<title><{$sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+
+</head>
+<body>
+<table width="90%" border="0" align="center" cellpadding="0"  cellspacing="0"  id="Header">
+</table>
+<table cellspacing="0" id="siteclosed"  align="center">
+    <tr>
+      <td id="centercolumn"  style="padding-top:40px; padding-bottom:60px; ">
+        <!-- Display center blocks if any -->
+  <table cellspacing="1" align="center" width="80%" border="0" cellpadding="10px;" class="siteclosed">
+    <tr>
+      <td align="center"><div style="color: #000000; text-align: center; font-weight: bold; padding: 10px;"><h3><{$lang_siteclosemsg}></h3></div></td>
+    </tr>
+  </table>
+  
+  <form action="<{$xoops_url}>/user.php" method="post">
+    <table cellspacing="0" align="center" style="width: 200px;">
+      <tr>
+      </tr>
+      <tr>
+        <td style="padding: 2px;"><{$lang_username}></td><td style="padding: 2px;"><input type="text" name="uname" size="12" value="" /></td>
+      </tr>
+      <tr>
+        <td style="padding: 2px;"><{$lang_password}></td><td style="padding: 2px;"><input type="password" name="pass" size="12" /></td>
+      </tr>
+      <tr>
+        <td style="padding: 2px;">&nbsp;</td>
+        <td style="padding: 2px;">
+        	<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+        	<input type="hidden" name="xoops_login" value="1" />
+        	<input type="submit" value="<{$lang_login}>" /></td>
+      </tr>
+    </table>
+  </form>      
+	  <{if $xoops_showrblock == 1}>
+      <{/if}>
+
+    </tr>
+  </table>
+</body>
+</html>

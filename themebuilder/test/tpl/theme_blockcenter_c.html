@@ -1,0 +1,13 @@
+<{if $xoops_isadmin}>&nbsp;
+<a href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin&op=edit&bid=}><{$block.id}>" title="Edit this Block" >
+<img src="<{$xoops_imageurl}>block/block-edit.png" alt="Edit this Block"></a>&nbsp;
+<a href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin&op=delete&bid=}><{$block.id}>" title="Delete this Block" >
+<img src="<{$xoops_imageurl}>block/block-delete.png" alt="Delete this Block"></a>&nbsp;
+<a href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin}>" title="Add New Block" >
+<img src="<{$xoops_imageurl}>block/block-add.png" alt="Add New Block"></a><{/if}>
+<div style="padding: 5px;">
+    <{if $block.title}> 
+    <div class="blockTitle"><h2><{$block.title}></h2></div>
+    <{/if}> 
+    <div class="blockContent"><{$block.content}></div>
+</div>

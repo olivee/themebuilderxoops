@@ -1,0 +1,79 @@
+body {
+	background-color: #666666;
+}
+
+#title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-variant: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #0099FF;
+	float: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding: 10px;
+}
+
+#title a {
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+
+#main {
+	background-color: #FFFFFF;
+}
+
+#message {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	color: #AFCC2D;
+	padding-top: 20px;
+	font-size: 1.4em;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+
+#subtitle {
+	padding-bottom: 25px;
+}
+
+#contact-area {
+	/*width: 600px;*/
+	color: #666666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding-left: 5px;
+}
+
+#contact-area input, #contact-area textarea, #contact-area select {
+	padding: 5px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus, #contact-area select:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: none;
+}
+
+.welcome {
+	color: #666666;
+}
+
+.error {
+	color: #990000;
+}
