@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<{include_php file="file:$xoops_rootpath/themes/$xoops_theme/configuration.inc.php"}>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+    <!-- Assign Theme name -->
+    <{assign var=theme_name value=$xoTheme->folderName}>
+		<!-- Open Graph -->
+<{if $og_title !=""}>
+	<meta property="og:title" content="<{$og_title}>" />
+	<{/if}>
+<{if $og_type !=""}><meta property="og:type" content="<{$og_type}>" />
+<{/if}>
+<{if $og_url !=""}><meta property="og:url" content="<{$og_url}>" />
+<{/if}>
+<{if $og_image !=""}><meta property="og:image" content="<{$xoops_url}><{$og_image}>" />
+<{/if}>
+	<meta property="og:site_name" content="<{$xoops_sitename}>" />
+	<meta property="og:description" content="<{$xoops_meta_description}>" />
+    <meta property="fb:admins" content="testadmin" />
+    <meta property="fb:app_id" content="testappid" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://fbcomments-email-notifications.googlecode.com/files/fbCommentsEN.js"></script>
+	<!-- Open Graph -->
+    <!-- Title and meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+    <meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+    <title><{if $xoops_pagetitle !=""}><{$xoops_pagetitle}> - <{/if}><{$xoops_sitename}></title>
+    <meta name="robots" content="<{$xoops_meta_robots}>" />
+    <meta name="keywords" content="<{$xoops_meta_keywords}>" />
+    <meta name="description" content="<{$xoops_meta_description}>" />
+    <meta name="rating" content="<{$xoops_meta_rating}>" />
+    <meta name="author" content="<{$xoops_meta_author}>" />
+    <meta name="copyright" content="<{$xoops_meta_copyright}>" />
+    <meta name="generator" content="XOOPS" />
+
+    <!-- Rss -->
+    <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="/uploads/favicon.ico" />
+    <link rel="icon" type="image/png" href="/uploads/favicon.ico" />
+
+    <!-- Sheet Css -->
+    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoAppUrl xoops.css}>" />
+    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl style.css}>" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css"/>
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="<{xoImgUrl styleIE8.css}>" type="text/css" />
+	<![endif]-->
+	
+	<!-- JS -->
+    <{if $xoops_dirname != "publisher"}>
+    <script type="text/javascript" src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js"> </script>
+    <script type="text/javascript" src="<{$xoops_imageurl}>js/curvycorners.src.js"> </script>
+    <{/if}>
+
+    <!-- customized header contents -->
+    <{$xoops_module_header}>
+
+
+<style>
+
+
+		.wrapper { background-color: transparent}
+		/*.wrapper { background-color: yellow}*/
+		
+
+/*
+<{if $body_background_texture}>
+body { 
+background-image:url("texture/<{$body_background_texture}>");
+background-repeat:<{$body_repeat}>;
+background-attachment:<{$body_bgscroll}>;
+background-position:<{$body_pos}>; 
+}<{/if}>
+
+<{if $body_background_img}>
+body {color: #000; background-color: <{$body_background_color}>;
+			background-image:url(<{$body_background_img}>);
+			background-repeat: <{$body_background_img_repeat}>;
+			background-attachment:<{$body_background_img_scroll}>;
+			background-position:<{$body_background_img_position}>; 
+}<{/if}>
+*/
+
+
+</style>
+	<!-- Sheet CssEXTRA -->
+    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl themes/themebuilder/custom-css.php}>" />
+		<!-- Sheet CssEXTRA -->
+    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl themes/themebuilder/widget-css.css}>" />
+
+
+	<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$("#back-top").fadeIn();
+			} else {
+				$("#back-top").fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$("#back-top a").click(function () {
+			$("body,html").animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+});
+</script>
+	
+	<style>
+#back-top {
+	position: fixed;
+	bottom: 30px;
+	margin-left: -150px;
+}
+
+#back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+	width: 108px;
+	height: 108px;
+	display: block;
+	margin-bottom: 7px;
+	background: #ddd url(themes/themebuilder/icons/up-arrow.png) no-repeat center center;
+
+	/* rounded corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	background-color: #777;
+}
+	</style>
+	
+	
+	
+<script>
+
+
+</script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amethysta&effect=emboss">
+ 
+</head>
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+<div class="wrapper">
+	<p id="back-top">
+		<a href="#top"><span></span>Back to Top</a>
+	</p>
+
+
+<{if $xoops_showlblock}><div class="olivee-itemq olivee-itemq-BlockcolumnLeft olivee-item-1-4"><div class="olivee-item-contentdiv"><{if $xoops_showlblock}>
+																	<{foreach item=block from=$xoBlocks.canvas_left}><{if $xoops_isadmin}>&nbsp;
+																					<a href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin&op=edit&bid=}><{$block.id}>" title="Edit this Block" >
+																					<img src="<{$xoops_imageurl}>block/block-edit.png" alt="Edit this Block"></a>&nbsp;
+																					<a href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin&op=delete&bid=}><{$block.id}>" title="Delete this Block" >
+																					<img src="<{$xoops_imageurl}>block/block-delete.png" alt="Delete this Block"></a>&nbsp;
+																					<a href="<{xoAppUrl /modules/system/admin.php?fct=blocksadmin}>" title="Add New Block" >
+																					<img src="<{$xoops_imageurl}>block/block-add.png" alt="Add New Block"></a>
+																				<{/if}>
+																		<{if $block.title}>
+																			<div class="blockTitle font-effect-emboss"><{$block.title}></div>
+																		<{/if}>
+																		<div class="blockContent"><{$block.content}></div>	
+																	<{/foreach}>
+																<{/if}></div></div><{/if}>
+<{if $xoBlocks.page_topleft or $xoBlocks.page_topcenter or $xoBlocks.page_topright or $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter or $xoops_contents && ($xoops_contents != " ")}><div class="olivee-itemq olivee-itemq-BlockcolumnCenter olivee-item-3-4"><div class="olivee-item-contentdiv">		 <{includeq file="$theme_name/tpl/theme_centerblocksandcontent.html"}></div></div><{/if}>
+</div>kkkkkkkkkkkk</body></html>

@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    VARS.SCSS
+\*------------------------------------*/
+/**
+ * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * keep, simply redefine here. This means that if inuit.css, for example, sets
+ * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in this file. inuit.css ignores its own variables in favour of
+ * using your own, so you can completely modify how inuit.css works without ever
+ * having to alter the framework itself.
+ */
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of inuit.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+/*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Place any variables that should override inuit.css’ defaults here.
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+/**
+ * Base font-family.
+ */
+/**
+ * Default colour for objects’ borders etc.
+ */
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * How big would you like round corners to be by default?
+ */
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * inuit.css will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
+.loader {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  opacity: 1;
+  -webkit-transition: all 1s ease-out .7s;
+  transition: all 1s ease-out .7s;
+}
+
+.loader-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: all .7s ease-out;
+  transition: all .7s ease-out;
+  -webkit-transform: translate(0, -60%);
+  -ms-transform: translate(0, -60%);
+  transform: translate(0, -60%);
+}
+
+.bubblingG {
+  text-align: center;
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: all .7s ease-out;
+  transition: all .7s ease-out;
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.bubblingG span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin: 25px auto;
+  background: #000000;
+  border-radius: 50px;
+  -webkit-animation: bubblingG 0.7s infinite alternate;
+  animation: bubblingG 0.7s infinite alternate;
+}
+
+#bubblingG_1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#bubblingG_2 {
+  -webkit-animation-delay: 0.21s;
+  animation-delay: 0.21s;
+}
+
+#bubblingG_3 {
+  -webkit-animation-delay: 0.42s;
+  animation-delay: 0.42s;
+}
+
+@-webkit-keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+    -webkit-transform: translateY(-21px);
+    transform: translateY(-21px);
+  }
+}
+
+@keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+    -webkit-transform: translateY(-21px);
+    -ms-transform: translateY(-21px);
+    transform: translateY(-21px);
+  }
+}
+.loader--loading .logo {
+  opacity: 1;
+}
+.loader--loading .site-wrapper,
+.loader--loading .nav-left,
+.loader--loading .nav-right,
+.loader--loading .nav-social {
+  -webkit-transition: none;
+  transition: none;
+}
+.loader--loading .site-wrapper {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.loader--loading .nav-left {
+  -webkit-transform: translate(-200%, -50%);
+  -ms-transform: translate(-200%, -50%);
+  transform: translate(-200%, -50%);
+}
+.loader--loading .nav-right {
+  -webkit-transform: translate(200%, -50%);
+  -ms-transform: translate(200%, -50%);
+  transform: translate(200%, -50%);
+}
+.loader--loading .nav-social {
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+}
+
+.loader--loaded .loader {
+  opacity: 0;
+}
+.loader--loaded .loader-logo {
+  -webkit-transform: translate(0, -600%);
+  -ms-transform: translate(0, -600%);
+  transform: translate(0, -600%);
+}
+.loader--loaded .bubblingG {
+  -webkit-transform: translate(0, 1500%);
+  -ms-transform: translate(0, 1500%);
+  transform: translate(0, 1500%);
+}
+.loader--loaded .site-wrapper {
+  -webkit-transition: all 1s ease-in 1.2s;
+  transition: all 1s ease-in 1.2s;
+}
+.loader--loaded .nav-left,
+.loader--loaded .nav-right,
+.loader--loaded .nav-social {
+  -webkit-transition: all 1s ease-out 1.7s;
+  transition: all 1s ease-out 1.7s;
+}
+.loader--loaded .site-wrapper,
+.loader--loaded .nav-social {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.loader--loaded .nav-left {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.loader--loaded .nav-right {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+@media only screen and (max-width: 1219px) {
+  .loader--loading .nav-left,
+  .loader--loading .nav-right {
+    -webkit-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  .loader--loaded .nav-left,
+  .loader--loaded .nav-right {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

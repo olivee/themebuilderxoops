@@ -12,44 +12,52 @@ include("../../../mainfile.php");
 	$css_arr = $xoopsDB -> fetchArray( $xoopsDB -> query( $sql ) );
 	$unserialise = unserialize($css_arr['conf_value']);
 	//var_dump( $unserialise['textalign_blockTitle']);
-	/*echo $unserialise['boxedfullwidthwrapper'];
-	echo $unserialise['fav_ico'];
-	echo $unserialise['body_background_texture'];
-	echo $unserialise['body_repeat'];
-	echo $unserialise['body_pos'];
-	echo $unserialise['body_bgscroll'];
-	echo $unserialise['body_background_color'];
-	echo $unserialise['body_background_img'];
-	echo $unserialise['body_background_img_repeat'];
-	echo $unserialise['body_background_img_position'];
-	echo $unserialise['body_background_img_scroll'];
-	echo $unserialise['scroll_top_enabled'];
-	echo $unserialise['fontsize'];
-	echo $unserialise['fonteffect'];
-	echo $unserialise['font_apercu'];
-	echo $unserialise['olivee-itemq-BlockcolumnLeft'];
-	echo $unserialise['blockTitlecolor'];
-	echo $unserialise['blockTitlebackgroundcolor'];
-	echo $unserialise['font_apercu_blockTitle'];
-	echo $unserialise['fontsize_blockTitle'];
-	echo $unserialise['olivee-itemq-BlockcolumnCenter'];
-	echo $unserialise['css_text_extra'];*/
-	
+	//echo $unserialise['boxedfullwidthwrapper'];
 
 
+	$body_background_texture = $unserialise['body_background_texture'];
+	$body_repeat = $unserialise['body_repeat'];
+	$body_bgscroll = $unserialise['body_bgscroll'];
+	$body_pos = $unserialise['body_pos'];
+	$body_background_bg = $unserialise['body_background_bg'];
+	$body_background_color = $unserialise['body_background_color'];
+	$body_background_img_repeat = $unserialise['body_background_img_repeat'];
+	$body_background_img_scroll = $unserialise['body_background_img_scroll'];
+	$body_background_img_position = $unserialise['body_background_img_position'];
+	$body_background_bgbgrotate = $unserialise['body_background_bgbgrotate'];
+if ($body_background_texture != 'none'){
+$body = 'body {
+			background-color: '.$body_background_color.';
+			background-image:url("texture/'.$body_background_texture.'");
+			background-repeat:'.$body_repeat.';
+			background-attachment:'.$body_bgscroll.';
+			background-position:'.$body_pos.'; 
+			}';
+}
 
+if ($body_background_bg != 'none'){
 
+if ($body_background_bgbgrotate == 'on'){
+$bgrotate = 'background-image:url(texture/bg/rotate.php);';
+}else{
+$bgrotate = 'background-image:url(texture/bg/'.$body_background_bg.');';
+}
+
+$body = 'body {
+			color: #000;
+			background-color: '.$body_background_color.';
+			'.$bgrotate.'
+			background-repeat: '.$body_background_img_repeat.';
+			background-attachment:'.$body_background_img_scroll.';
+			background-position:'.$body_background_img_position.';
+			}';
+}
 ?>
 @media only screen and (min-width: 1212px) {
-	@import url('http://fonts.googleapis.com/css?family=<?php echo $unserialise['font_apercu_blockTitle']; ?>');
-	body
-	{	
-		background-color: <?php echo $unserialise['body_background_color'];  ?> !important;		 
-		background-image: url('<?php echo 'admin/texture/'.$unserialise['body_background_texture']; ?>');
-		background-repeat: <?php echo $unserialise['body_repeat']; ?>;
-		background-attachment: <?php echo $unserialise['body_bgscroll']; ?> ;
-		background-position: <?php echo $unserialise['body_pos']; ?>;
-	}
+
+
+	<?php echo $body; ?>
+	
 	
 	div.wrapper{
 	
@@ -67,10 +75,25 @@ include("../../../mainfile.php");
 	background-color: <?php echo $unserialise['olivee-itemq-BlockcolumnLeft']; ?> ;
 	}
 	
+	.blockdiv {
+	
+	background-color: blanchedalmond;
+	margin-bottom: 20px;
+	border-bottom-style:solid;
+	border-bottom-color:#ff0000;
+	
+	
+	}
+	
+	.blockContent {
+	border: 1px solid #DDD;
+	
+	}
+	
 	.blockTitle{
 	color: <?php echo $unserialise['blockTitlecolor']; ?> ;
 	background-color: <?php echo $unserialise['blockTitlebackgroundcolor']; ?> ;
-	font-family: <?php echo $unserialise['font_apercu_blockTitle']; ?> ;
+	font-family: '<?php echo $unserialise['font_apercu_blockTitle']; ?>' ;
 	font-size: <?php echo $unserialise['fontsize_blockTitle']; ?> ;
 	text-align: <?php echo $unserialise['textalign_blockTitle']; ?> ;
 	}
@@ -80,6 +103,9 @@ include("../../../mainfile.php");
 	background-color: <?php echo $unserialise['olivee-itemq-BlockcolumnCenter']; ?> ;
 	
 	}
+	
+	<?php echo $unserialise['css_text_extra']; ?>
+	
 	
 }
 

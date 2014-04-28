@@ -1,49 +1,267 @@
-<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
-<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
-<title><{$sitename}></title>
-<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
 
-</head>
-<body>
-<table width="90%" border="0" align="center" cellpadding="0"  cellspacing="0"  id="Header">
-</table>
-<table cellspacing="0" id="siteclosed"  align="center">
-    <tr>
-      <td id="centercolumn"  style="padding-top:40px; padding-bottom:60px; ">
-        <!-- Display center blocks if any -->
-  <table cellspacing="1" align="center" width="80%" border="0" cellpadding="10px;" class="siteclosed">
-    <tr>
-      <td align="center"><div style="color: #000000; text-align: center; font-weight: bold; padding: 10px;"><h3><{$lang_siteclosemsg}></h3></div></td>
-    </tr>
-  </table>
-  
-  <form action="<{$xoops_url}>/user.php" method="post">
-    <table cellspacing="0" align="center" style="width: 200px;">
-      <tr>
-      </tr>
-      <tr>
-        <td style="padding: 2px;"><{$lang_username}></td><td style="padding: 2px;"><input type="text" name="uname" size="12" value="" /></td>
-      </tr>
-      <tr>
-        <td style="padding: 2px;"><{$lang_password}></td><td style="padding: 2px;"><input type="password" name="pass" size="12" /></td>
-      </tr>
-      <tr>
-        <td style="padding: 2px;">&nbsp;</td>
-        <td style="padding: 2px;">
-        	<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
-        	<input type="hidden" name="xoops_login" value="1" />
-        	<input type="submit" value="<{$lang_login}>" /></td>
-      </tr>
-    </table>
-  </form>      
-	  <{if $xoops_showrblock == 1}>
-      <{/if}>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><{$sitename}></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1, minimum-scale=1" />
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    </tr>
-  </table>
+        <link rel="stylesheet" href="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/styles/loader.min.css"/>
+        <link rel="stylesheet" href="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/styles/main.min.css"/>
+
+        <link rel="stylesheet" href="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/styles/custom.css">
+
+        <script src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/scripts/modernizr.custom.min.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <!--[if lte IE 8]>
+        <script src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/scripts/respond.min.js"></script>
+        <![endif]-->
+
+        <script>
+            var now = new Date();
+            startDate = now.setDate(now.getDate() - 63);
+            targetDate = now.setDate(now.getDate() + 89) - 32810000;
+            var miniGoOptions = {
+                theme: {
+                    // Set to true to add a translucent background behind each page
+                    contentBackground: false
+                },
+
+                countdown: {
+                    // Possible options are "default" or "piechart"
+                    type: "piechart",
+                    // The date when the countdown started. Used by the progress bars. 24 Hour format (00 to 23): Month Day, Year Hours:Minutes
+                    startDate: new Date(startDate),
+                    // The target date we"re counting down to. 24 Hour format (00 to 23): Month Day, Year Hours:Minutes
+                    targetDate: new Date(targetDate)
+                },
+
+                background: {
+                    // Main background color
+                    color: "#000",
+                    // Path to pattern overlay or empty if not needed. Use "" for empty.
+                    patternOverlay: "",
+                    // Sets the opacity of the pattern overlay. 0 is completely transparent, 1.0 is fully opaque.
+                    patternOverlayOpacity: 0.3,
+                    // Possible options are "slideshow" or "video". Enter "" if no slideshow/video is desired as background.
+                    type: "",
+
+                    slideshow: {
+                        // Type of transition effect. Possible options are "kenburns", "fade" or "continuousFade".
+                        type: "kenburns",
+                        // Time in seconds between image changes
+                        duration: 10,
+
+                        // Ken Burns animation settings
+                        kenburns: {
+                            // Minimum and maximum scale of the image. It will be randomized for every frame.
+                            minScale: 1.2,
+                            maxScale: 1.7,
+                            // Minimum and maximum movement of the image, in percent. It will be randomized for every frame. Note that this is also limited by the scale because the image needs to stay within the viewport.
+                            minMove: 5,
+                            maxMove: 15
+                        }
+                    },
+
+                    video: {
+                        // Possible options are "local" or "youtube"
+                        source: "local",
+                        // Fallback image for browsers that can"t play video
+                        imageFallback: "<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bgvideo.jpg",
+                        // Sets the volume of the video. Value range 0 to 100.
+                        volume: 0,
+
+                        // Configure the video files if you selected "local" as video source
+                        localFiles: {
+                            // H.264 (mp4) video format file. This one is required because we use it to fall back to Flash playback when HTML5 video support is missing. For example, Firefox only supports this format on Windows so on other systems it will fallback to Flash playback which is a bit slower.
+                            mp4: "video/bg.mp4",
+                            // Optional. OGG Video is optional but useful because it"s played natively by Firefox on OSX and Linux. Enter "" if you don"t have this format.
+                            ogg: "video/bg.ogv",
+                            // Optional. WebM files are generally smaller and faster than H.264 and are played by Chrome, Firefox, Opera and Android browsers (which also support H.264)
+                            webm: "video/bg.webm",
+                        },
+
+                        youtube: {
+                            // Enter the URL of the Video or Playlist
+                            url: "http://www.youtube.com/watch?v=ab0TSkLe-E0",
+
+                            // The options below allow you to play only a part of a video. For playlists it will only work for the first video.
+                            // If you dont"t want the video to start from the very beginning, enter the time offset in seconds.
+                            startAt: 0,
+                            // If you dont"t want the video to end at the very end, enter the time offset FROM THE BEGINNING of the video, in seconds. Otherwise leave it at 0.
+                            endAt: 200,
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="loader">
+            <img class="loader-logo" src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/logo.png" width="141" height="141" alt="MiniGO">
+            <div class="bubblingG">
+                <span id="bubblingG_1"></span>
+                <span id="bubblingG_2"></span>
+                <span id="bubblingG_3"></span>
+            </div>
+        </div>
+
+        <div class="site-wrapper">
+            <div class="site-page site-front site-page--active">
+
+                <div class="grid">
+                    <div class="grid__item one-whole push--bottom">
+                        <img src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/logo.png" width="141" height="141" alt="MiniGO">
+                    </div>
+
+                    <div class="grid__item one-whole">
+                        <h3>Welcome to Theme Builder, a clean, modern coming soon template.</h3>
+                    </div>
+
+                    <div class="grid__item one-whole">
+                        <div class="clock" data-labels="Days,Hours,Minutes,Seconds"></div>
+                    </div>
+
+                    <div class="grid__item one-whole push--top">
+                        <div class="form-flip push--top">
+                            <button class="form-flip__enabler btn btn--full">Get Notified</button>
+
+                            <div class="form-flip__target">
+                                <form class="form-ajax" data-success-response="success" action="mailListHandler.php" method="post">
+                                    <div class="input-group">
+                                        <input class="text-input" name="email" type="email" placeholder="Your e-mail address" data-msg-required="This field is required." data-msg-email="Please enter a valid email address." required>
+                                        <div class="input-group-addon">
+                                            <button class="btn btn--font-black" type="submit" autocomplete="off"><span>GO</span><i class="form-spinner fa fa-spinner"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" name="subscribe">
+
+                                    <input type="text" name="important-info">
+                                    <!-- Don"t remove the above field. It is a decoy to prevent spam -->
+                                </form>
+                            </div>
+
+                            <button class="form-flip__close btn btn--full">Got it, thank you</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="aboutPage" class="site-page site-page--from-left">
+                <h1>Who we are</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nibh at libero fringilla adipiscing nec ut leo. Etiam nec purus arcu. Morbi sollicitudin at risus id malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam sed tincidunt arcu. Donec molestie ante sapien, sed molestie est euismod eget. Maecenas ac metus accumsan, scelerisque massa sed, porta est. Aliquam ut mollis mi. Cras id vulputate purus, ac sollicitudin ante.</p>
+
+                <p>Integer condimentum eu lectus quis semper. Sed id metus magna. Morbi ultrices magna id euismod hendrerit. Pellentesque nec mattis odio, vitae laoreet metus. Sed eget sollicitudin est, vitae accumsan nisi. Fusce consequat imperdiet venenatis. Integer mollis hendrerit facilisis. Praesent vel mattis enim. Integer fringilla et urna vitae rutrum.</p>
+            
+			<form action="<{$xoops_url}>/user.php" method="post">
+							Username:  <input type="text" name="uname" size="12" value="" />
+							Password:  <input type="password" name="pass" size="12" />
+									<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+									<input type="hidden" name="xoops_login" value="1" />
+									<input type="submit" value="User Login" />
+						</form> 
+			</div>
+
+            <div id="contactPage" class="site-page site-page--from-right">
+                <h1>Get in touch</h1>
+
+                <div class="grid">
+                    <div class="grid__item one-whole">
+                        <div class="contact-info"><i class="fa fa-phone"></i>+41 078 7549690</div>
+                        <div class="contact-info"><i class="fa fa-envelope-o"></i><a href="mailto:mail@website.web">mail@website.web</a></div>
+                    </div>
+                    <div class="grid__item one-whole push-half--top">
+                        <div class="contact-info"><i class="fa fa-map-marker"></i>354 Rue du Temple 2610 Neuchatêl, Suisse</div>
+                    </div>
+                </div>
+
+                <form id="contactForm" data-msg-success="Message sent!" class="form-ajax" data-success-response="success" action="mailListHandler.php" method="post">
+                    <div class="grid">
+                        <div class="grid__item one-half palm-one-whole push--top">
+                            <input class="text-input" name="name" type="text" placeholder="Your name" data-msg-required="This field is required." required>
+                        </div>
+                        <div class="grid__item one-half palm-one-whole push--top">
+                            <input class="text-input" name="email" type="email" placeholder="Your e-mail address" data-msg-required="This field is required." data-msg-email="Please enter a valid email address." required>
+                        </div>
+                        <div class="grid__item one-whole push--top">
+                            <textarea rows="6" name="message" placeholder="Message" data-msg-required="This field is required." required></textarea>
+                        </div>
+                        <div class="grid__item one-whole push--top">
+                            <button class="btn btn--font-bold" type="submit" autocomplete="off"><span>SEND MESSAGE</span><i class="form-spinner fa fa-spinner"></i></button>
+                        </div>
+                    </div>
+                    <input type="hidden" name="contact">
+
+                    <input type="text" name="important-info">
+                    <!-- Don"t remove the above field. It is a decoy to prevent spam -->
+                </form>
+            </div>
+        </div>
+
+        <div class="nav-social">
+            <a href="#" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" title="Like us on Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" title="Join us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="#" title="Pinterest Pinboard"><i class="fa fa-pinterest"></i></a>
+            <a href="#" title="Our works on Dribbble"><i class="fa fa-dribbble"></i></a>
+        </div>
+
+        <div class="nav-left">
+            <a href="#aboutPage" title="About" class="site-page__trigger"><i class="fa fa-info-circle"></i></a>
+        </div>
+        <div class="nav-right">
+            <a href="#contactPage" title="Contact" class="site-page__trigger"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="nav-close">
+            <a href="#" title="Close" class="site-page__close"><i class="fa fa-times-circle"></i></a>
+        </div>
+
+
+        <figure class="bg-wrapper">
+            <img src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/slideshow-1.jpg" alt="Optional alt text goes here">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/slideshow-2.jpg" alt="">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/slideshow-3.jpg" alt="">
+
+            <!-- <img src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bg1.jpg" alt="Optional alt text goes here">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bg3.jpg" alt="">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bg2.jpg" alt="">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bg5.jpg" alt="">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bg4.jpg" alt="">
+            <img data-src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/img/bg6.jpg" alt=""> -->
+        </figure>
+
+        <!--[if lte IE 8]><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+        <!--[if gt IE 8]><!--><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><!--<![endif]-->
+
+
+        <script src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/scripts/flipclock.min.js"></script>
+
+        <!--[if gt IE 8]><!-->
+        <script src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/scripts/jquery.easypiechart.min.js"></script>
+        <!--<![endif]-->
+
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+
+
+        <script src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/scripts/main.min.js"></script>
+
+        <!--[if lte IE 9]>
+        <script src="<{$xoops_url}>/themes/themebuilder/extra_theme_templete/systeme_siteclosed/assets/scripts/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <!-- Google Analytics code goes below this line -->
+
 </body>
 </html>
+
