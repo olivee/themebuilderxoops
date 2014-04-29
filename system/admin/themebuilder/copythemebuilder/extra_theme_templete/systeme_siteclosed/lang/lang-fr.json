@@ -1,0 +1,36 @@
+{
+	"name": {
+		"name_light": "Theme Builder ZoooooopS",
+		"name_dark": "BIENTÔT",
+		"desc": "Très bientôt, notre site sera ouvert aux visiteurs, nous vous remercions pour votre patience et votre compréhension.",
+		"subscribe": {
+			"header": "Restez informés",
+			"subscribe": "Envoyer",
+			"row_input": "S'il vous plaît entrer votre adresse e-mail"
+		}
+	},
+
+	"count": {
+		"days": "Jour",
+		"hours": "Heures",
+		"mins": "Mins",
+		"sec": "Sec"
+	},
+
+	"modal": {
+		"lang": {
+			"header": "Langue"
+		}
+	},
+
+	"foot": {
+		"l": "Langue: Français"
+	},
+	
+	"messages": {
+		"subs": "Cet email est déjà signé",
+		"mail": "Veuillez fournir une adresse électronique valide",
+		"required": "Ce champ est obligatoire",
+		"success": "Votre e-mail est enregistrée"
+	}
+}

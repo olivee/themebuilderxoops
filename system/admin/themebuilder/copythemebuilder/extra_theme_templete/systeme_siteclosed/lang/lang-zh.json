@@ -1,0 +1,37 @@
+{
+	"name": {
+		"name_light": "Theme Builder ZoooooopS",
+		"name_dark": "即將推出",
+		"desc": "很快，我們的網站將是對遊客開放的，我們希望為您的耐心和理解。",
+		"subscribe": {
+			"header": "保持聯繫",
+			"subscribe": "訂閱",
+			"row_input": "請輸入您的E-mail地址"
+		}
+	},
+	
+	"count": {
+		"days": "天",
+		"hours": "看",
+		"mins": "分鐘",
+		"sec": "秒"
+	},
+	
+	"modal": {
+			"lang": {
+			"header": "語言"
+		}
+	},
+	
+	"foot": {
+		"l": "語言: 中國人"
+	},
+	
+	"messages": {
+		"subs": "這個電子郵件地址已經被簽名",
+		"mail": "请输入正确格式的电子邮件",
+		"required": "必选字段",
+		"success": "保存您的電子郵件"
+  
+	}
+}
