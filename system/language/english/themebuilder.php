@@ -4,10 +4,10 @@
  * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
  * _LANGCODE    en
  * _CHARSET     UTF-8
- * @version     $Id: banners.php 9271 2012-04-04 04:31:29Z beckmi $
+ * @version     $Id: themebuilder.php 9271 2012-04-04 04:31:29Z beckmi $
  */
 
-//%%%%%%        Admin Module Name  Banners         %%%%%
+//%%%%%%        Admin Module Name  Themebuilder         %%%%%
 define("_AM_SYSTEM_BANNERS_DBUPDATED",_AM_SYSTEM_DBUPDATED);
 
 //Nav
