@@ -4,13 +4,14 @@
  * @license     http://www.fsf.org/copyleft/gpl.html GNU public license
  * _LANGCODE    en
  * _CHARSET     UTF-8
- * @version     $Id: themebuilder.php 9271 2012-04-04 04:31:29Z beckmi $
+ * @version     $Id: themebuilder.php 9271 2014-05-02 04:31:29Z olivee $
  */
 
 //%%%%%%        Admin Module Name  Themebuilder         %%%%%
 define("_AM_SYSTEM_BANNERS_DBUPDATED",_AM_SYSTEM_DBUPDATED);
 
-//Nav
+define("_AM_SYSTEM_THEME","Theme Builder");
+define("_AM_SYSTEM_THEME_DESC","description ......");
 define("_AM_SYSTEM_THEMEBUILDER_DASHBOARD","Dashboard");
 define("_AM_SYSTEM_THEMEBUILDER_Menu","Menu");
 define("_AM_SYSTEM_THEMEBUILDER_Slider","Slider");
@@ -66,12 +67,144 @@ define("_AM_SYSTEM_THEMEBUILDER_css_extra_text","css text extra a ajouter: Paste
 define("_AM_SYSTEM_THEMEBUILDER_js_header_text","js header text extra a ajouter: Paste your custom js code here.");
 define("_AM_SYSTEM_THEMEBUILDER_js_body_text","js body text extra a ajouter: Paste your custom js code here");
 define("_AM_SYSTEM_THEMEBUILDER_Submit","Submit");
-define("_AM_SYSTEM_BANNERS_SUREDELBNR","Are you sure you want to delete this Client and ALL its Banners?");
-define("_AM_SYSTEM_BANNERS_EDITADVCLI","Edit Advertising Client");
-define("_AM_SYSTEM_BANNERS_EXTINFO","Extra Info:");
-define("_AM_SYSTEM_BANNERS_CHGCLI","Change Client");
-define("_AM_SYSTEM_BANNERS_USEHTML","Use HTML code?");
-define("_AM_SYSTEM_BANNERS_CODEHTML","Enter HTML code:");
+define("_AM_SYSTEM_THEMEBUILDER_probleme_mod_menu","Probleme modification menu");
+define("_AM_SYSTEM_THEMEBUILDER_menuenregistre","menu enregistré.");
+define("_AM_SYSTEM_THEMEBUILDER_problemeaveclenregistrement","Problème avec l'enregistrement du menu ressayez encore une fois");
+define("_AM_SYSTEM_THEMEBUILDER_ilfautchoisirunautretitle","il faut choisir un autre titre. le titre choisi existe déjà");
+define("_AM_SYSTEM_THEMEBUILDER_Itemajouteaumenu","Item ajouté au menu");
+define("_AM_SYSTEM_THEMEBUILDER_problemeressayer","Problème ajout item bd ressayez encore une fois 222");
+
+define("_AM_SYSTEM_THEMEBUILDER_ilfautchoisirunautretitre","il faut choisir un autre titre. le titre de l'item choisi existe déjà");
+
+define("_AM_SYSTEM_THEMEBUILDER_problememodification","Probleme modification slider");
+
+define("_AM_SYSTEM_THEMEBUILDER_slidermodifier","slider modifié");
+define("_AM_SYSTEM_THEMEBUILDER_problememodifslider","Probleme modification slider");
+
+define("_AM_SYSTEM_THEMEBUILDER_sliderenregistre","slider enregistré retour a l'interface admin");
+define("_AM_SYSTEM_THEMEBUILDER_problemeressayer","Probleme config_them ressayez encore une fois");
+define("_AM_SYSTEM_THEMEBUILDER_ilfochoisirunautretitre","il faut choisir un autre titre. le titre choisi existe déjà");
+define("_AM_SYSTEM_THEMEBUILDER_itemenregistre","Item enregistré au slider");
+define("_AM_SYSTEM_THEMEBUILDER_problemeressayeren","Probleme config_them ressaye encore une fois");
+define("_AM_SYSTEM_THEMEBUILDER_ilfochoisirunautretitre","il faut choisir un autre titre. le titre choisi existe déjà");
+define("_AM_SYSTEM_THEMEBUILDER_problemeressayer","Probleme config_them ressaye encore une fois else");
+define("_AM_SYSTEM_THEMEBUILDER_modifymenu","Modify menu");
+define("_AM_SYSTEM_THEMEBUILDER_catmenu","cat_menu");
+define("_AM_SYSTEM_THEMEBUILDER_catskin","cat skin");
+define("_AM_SYSTEM_THEMEBUILDER_modifymenuitem","modify menu item");
+define("_AM_SYSTEM_THEMEBUILDER_menuparent","menu parent");
+define("_AM_SYSTEM_THEMEBUILDER_itemparent","item parent");
+define("_AM_SYSTEM_THEMEBUILDER_titre","tittttre");
+define("_AM_SYSTEM_THEMEBUILDER_link","link");
+define("_AM_SYSTEM_THEMEBUILDER_ordre","ordre");
+define("_AM_SYSTEM_THEMEBUILDER_nouveaumenu","nouveau menu");
+define("_AM_SYSTEM_THEMEBUILDER_directionmenu","Direction Menu");
+define("_AM_SYSTEM_THEMEBUILDER_animation","Animation Menu");
+define("_AM_SYSTEM_THEMEBUILDER_stiky","stickyoffset Menu: 0 inactif");
+define("_AM_SYSTEM_THEMEBUILDER_color","Color Menu:");
+define("_AM_SYSTEM_THEMEBUILDER_nouveauitem","nouveau item dans un menu");
+define("_AM_SYSTEM_THEMEBUILDER_menuparent","menu parent");
+define("_AM_SYSTEM_THEMEBUILDER_Itemparent","item parent");
+define("_AM_SYSTEM_THEMEBUILDER_icon","icon");
+define("_AM_SYSTEM_THEMEBUILDER_classparent","class parent item");
+define("_AM_SYSTEM_THEMEBUILDER_titrslider","titre slider");
+define("_AM_SYSTEM_THEMEBUILDER_slidertheme","slider theme");
+define("_AM_SYSTEM_THEMEBUILDER_ajouterunitemauslider","Ajouter un item au slider");
+define("_AM_SYSTEM_THEMEBUILDER_sliderparent","Slider parent");
+define("_AM_SYSTEM_THEMEBUILDER_uploadimage","Upload image");
+define("_AM_SYSTEM_THEMEBUILDER_image","image");
+define("_AM_SYSTEM_THEMEBUILDER_titredelitemdansleslider","titre de l\'item dans le slider");
+define("_AM_SYSTEM_THEMEBUILDER_urldelitemdansleslider","url de l\'item dans le slider");
+define("_AM_SYSTEM_THEMEBUILDER_ordredelitemdansleslider","ordre de l\'item slider");
+define("_AM_SYSTEM_THEMEBUILDER_uploadfile","Upload File");
+define("_AM_SYSTEM_THEMEBUILDER_ajouterunnouveauslide","Ajouter un nouveau slide");
+define("_AM_SYSTEM_THEMEBUILDER_titreslider","titre slider");
+/*define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");
+define("_AM_SYSTEM_BANNERS_USEHTML","yes");
+define("_AM_SYSTEM_BANNERS_CODEHTML","nooooo");*/
 
 
 ?>
